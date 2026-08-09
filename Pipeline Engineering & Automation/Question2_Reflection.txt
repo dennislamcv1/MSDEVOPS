@@ -1,0 +1,13 @@
+QUESTION 2 — REFLECTION
+Which part of the proposal is most persuasive for a leadership audience, and why?
+
+The ROI projection is the most persuasive section, because it converts a vague operational
+complaint into an auditable figure — 60 OOM events x 38 minutes = 38 hours per month — that
+any executive can recalculate, challenge, and hold me to after implementation. Its credibility
+comes largely from arguing against itself: charging 3.4 hours of human oversight back against
+the savings and conceding that 15 percent of incidents still require a person signals honest
+estimation rather than advocacy, which is precisely what makes the remaining 42.9 hours
+believable to an audience trained to discount optimistic engineering forecasts. The supporting
+detail that earns the most trust is the circuit breaker escalating to PagerDuty instead of
+silently patching, since it answers leadership's real unspoken concern — that automation will
+conceal defects rather than resolve them.

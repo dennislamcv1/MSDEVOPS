@@ -1,0 +1,11 @@
+RESPONSE 1 - Azure DevOps Hierarchy and Access Structure: Resolution of SOX Audit Findings
+(Required: 100-150 words | Submitted: 140 words)
+
+The prior findings of privilege bleeding across tenant boundaries and unattributable administrative action stemmed from ad hoc group membership rather than inherited authorization. The three-tier hierarchy resolves this by binding every Azure DevOps permission to an Entra ID group at exactly one tier, so Tier 3 product teams hold Contributor rights that cannot escalate into Tier 2 project administration or Tier 1 organization policy. The decisive project-level isolation control is agent pool partitioning: open access for all pipelines is disabled, forcing per-pipeline authorization against a dedicated regulated pool. This supports the production environment approval gate, where two approvers drawn from a group mutually exclusive of the requesting team must authorize promotion. Self-approval is disabled, and every activation, approval, and denial streams to an immutable WORM store, giving SOX Section 404 the segregation-of-duties evidence and tamper-evident audit trail its testing requires.
+
+-----------------------------------------------------------------------------------------
+
+RESPONSE 2 - Greatest Enforcement Risk in the GitHub Branching Strategy and Its Mitigation
+(Required: 75-100 words | Submitted: 87 words)
+
+The greatest enforcement risk is signing bypass through automation: machine-generated commits from release bots, dependency updaters, and pipeline promotions arriving unsigned, tempting teams to widen the ruleset exception list. We mitigate by giving every pipeline a federated workload identity with its own registered signing key, so automated commits are cryptographically verified exactly as human ones are. The bypass list stays empty, Vigilant Mode flags anomalies immediately, and delivery speed is unaffected because signing executes inside the existing job with no additional approval hop or manual key handling.
